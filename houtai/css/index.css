@@ -1,0 +1,141 @@
+.box{
+	margin-top: 56px;
+}
+.list-tag{
+	top: 56px;	
+	bottom: 0;
+	background-color: #ddd;
+	padding: 0;
+}
+.coll-text{
+	font-size: 16px;
+}
+.ca{
+	border: none;
+}
+.ca h2{
+	cursor: pointer;
+}
+.ca li{
+	cursor: pointer;
+}
+.pro-active{
+	color: #e4393c !important;
+}
+.pro-img{
+	width: 60px;
+	margin: 0 auto;
+}
+
+td{
+	vertical-align: middle;
+}
+
+.pro-title{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 500px;
+}
+.welcome{
+	color: #fff;
+	font-size: 20px;
+	padding-right: 20px;
+}
+.rightbody{
+	/* display: none; */
+}
+.insert-box{
+	display: none;
+}
+.add-box{
+	display: none;
+}
+/* 添加类型 */
+.insertkind .icon{
+	width: 18px;
+	height: 18px;
+	border: 3px solid #666;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 5px;
+	position: relative;
+	border-radius: 50%;
+}
+.insertkind .icon i{
+	position: absolute;
+	display: inline-block;
+	width: 10px;
+	height: 2px;
+	background-color: #666666;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.insertkind .icon .two{
+	transform: rotateZ(90deg);
+}
+
+
+
+.insert-box .icon{
+	width: 30px;
+	height: 30px;
+	border: 4px solid #666;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 5px;
+	position: relative;
+	border-radius: 50%;
+	background: #fff;
+}
+
+.insert-box .icon i{
+	position: absolute;
+	display: inline-block;
+	width: 16px;
+	height: 2px;
+	background-color: #666;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.insert-box .icon .icon2{
+	transform: rotateZ(90deg);
+}
+
+/* 添加商品 */
+.add-box .icon{
+	width: 30px;
+	height: 30px;
+	border: 4px solid #666;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 5px;
+	position: relative;
+	border-radius: 50%;
+	background-color: #666;
+	
+}
+.add-box .icon i{
+	position: absolute;
+	display: inline-block;
+	width: 16px;
+	height: 2px;
+	background-color: #fff;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.add-box .icon .icon2{
+	transform: rotateZ(90deg);
+}
+.inputkind{
+	color: #999;
+}

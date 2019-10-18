@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/regist.css"/>
+	</head>
+	<body>
+		<!-- <form name="regist" onsubmit="return success()" method="get"> -->
+			<div class="box">
+				<label for="number">手机号码：<input type="text" id="number"><p></p></label>
+				<label for="username">用户名：<input type="text" id="username"><p></p></label>
+				<label for="password">密码：<input type="password" id="password"><p></p></label>
+				<label for="confirm">确认密码：<input type="password" id="confirm"><p></p></label>
+				<button class="button" onclick="success()">注册</button>
+				<a href="login.html">返回登录</a>
+			</div>
+		<!-- </form> -->
+		<script type="text/javascript">
+			
+			
+			var number = document.getElementById("number");
+			var username = document.getElementById("username");
+			var password = document.getElementById("password");
+			var confirm = document.getElementById("confirm");
+			var req = document.getElementsByTagName("p");
+			number.val = '';
+			username.val = '';
+			password.val = '';
+			
+			number.onblur = function(){
+				var val = number.value;
+				var pat = /^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/;
+				console.log(val);
+				if(val == ""){
+					req[0].style.display = 'block';
+					req[0].innerHTML = "内容不能为空";
+				}else if(val.match(pat)){
+					req[0].style.display = 'none';
+					number.val = val;
+					return number.val;
+				}else{
+					req[0].style.display = 'block';
+					req[0].innerHTML = "请输入正确的11位号码";
+				}
+			}
+			username.onblur = function(){
+				var val = username.value;
+				var pat = /[a-zA-Z][a-zA-Z0-9_]{5,19}$/;
+				console.log(val);
+				if(val == ""){
+					req[1].style.display = 'block';
+					req[1].innerHTML = "内容不能为空";
+				}else if(val.match(pat)){
+					req[1].style.display = 'none';
+					username.val = val;
+					return username.val;
+				}else{
+					req[1].style.display = 'block';
+					req[1].innerHTML = "请输入6-20个字符，可以由由字母数字下划线组成";
+				}
+				console.log(username.val);
+			}
+			password.onblur = function(){
+				var val = password.value;
+				var pat = /[a-zA-Z0-9_]{5,17}$/;
+				console.log(val);
+				if(val == ""){
+					req[2].style.display = 'block';
+					req[2].innerHTML = "内容不能为空";
+				}else if(val.match(pat)){
+					req[2].style.display = 'none';
+					password.val = val;
+					return password.val;
+				}else{
+					req[2].style.display = 'block';
+					req[2].innerHTML = "只能由6-18位数字、字母下划线组成";
+				}
+			}
+			confirm.onblur = function(){
+				var val = confirm.value;
+				var pat = new RegExp(password.value);
+				console.log(val);
+				if(val == ""){
+					req[3].style.display = 'block';
+					req[3].innerHTML = "内容不能为空";
+				}else if(val.match(pat)){
+					req[3].style.display = 'none';
+				}else{
+					req[3].style.display = 'block';
+					req[3].innerHTML = "密码与确认密码不相同";
+				}
+			}
+			function success(){
+				if(number.val == "" || username.val == "" || password.val == ""){
+					alert("请完善以上信息");
+					return false;
+				}else{
+					alert("注册成功");
+					var user = JSON.parse(localStorage.getItem("user"));
+					var id = parseInt(user.length) + 1;
+					var json = {
+						"number":number.val,
+						"name":username.val,
+						"pwd":password.val,
+						"product":[];
+					}
+					console.log(user);
+					user.push(json);
+					localStorage.setItem("user",JSON.stringify(user));
+				}
+			}
+		</script>
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<script src="js/message.js"></script>
+	</body>
+</html>

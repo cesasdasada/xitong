@@ -1,0 +1,62 @@
+.box{
+	width: 290px;
+	background: rgba(34,117,201,0.2);
+	padding: 20px 10px;
+	margin: 0 auto;
+	border-radius: 20px;
+	clear: both;
+	text-align: center;
+	position: relative;
+}
+.box input{
+	width: 200px;
+	height: 28px;
+	outline: none;
+	border: 1px solid #E0E0E0;
+	font-size: 16px;
+}
+.box label{
+	float: right;
+	margin: 5px 0;
+	position:relative;
+	width: 282px;
+	text-align: right;
+}
+.box label p{
+	position: absolute;
+	left: 280px;
+	top:-12px;
+	color:red;
+	display: none;
+	width: 500px;
+	text-align: left;
+	text-indent: 1em;
+}
+.box .button{
+	width: 200px;
+	height: 30px;
+	border: none;
+	background: #0066CC;
+	color: #FFFFFF;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 5px;
+	margin-top: 20px;
+	text-align: center;
+	line-height: 30px;
+}
+.mask{
+	height: 100px;
+	width: 200px;
+	font-size: 20px;
+	color: #fff;
+	background: #2E82FF;
+	border: 5px solid #415FFF;
+	position: absolute;
+	top: 90px;
+	left: 30px;
+	line-height: 100px;
+	text-align: center;
+	font-weight: bold;
+	display: none;
+}

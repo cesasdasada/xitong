@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body>
+		<!-- 导航栏 -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+			<a class="navbar-brand" href="#">商品管理</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#d">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="d">
+				<div class="welcome ml-auto">elderlike 欢迎你</div>
+				<a href="login.html" class="btn btn-danger">退出登录</a>
+			</div>
+		</nav>
+		<!-- 页面主体 -->
+		<div class="box">
+			<div class="container-fluid">
+				<div class="row">
+					<!-- 左侧菜单 -->
+					<div class="col-lg-2 fixed-top list-tag d-none d-lg-block">
+						<div class="accordion" id="accordionExample">
+							<div class="card ca border-bottom">
+								<div class="card-header" id="headingOne">
+									<h2 class="mb-0">
+										<div class="coll-text addpage" data-toggle="collapse" data-target="#one" aria-expanded="true" aria-controls="one">
+											添加商品
+										</div>
+									</h2>
+								</div>
+
+								<div id="one" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+									<div class="card-body py-2">
+										<ul class="list-unstyled mb-0 add">
+											<!-- js添加 -->
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="card ca border-bottom">
+								<div class="card-header" id="headingTwo">
+									<h2 class="mb-0">
+										<div class="coll-text showpage" data-toggle="collapse" data-target="#two" aria-expanded="false" aria-controls="two">
+											查看商品
+										</div>
+									</h2>
+								</div>
+								<div id="two" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+									<div class="card-body py-2">
+										<ul class="list-unstyled mb-0 showdata">
+											<!-- js添加 -->
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="card ca border-bottom">
+								<div class="card-header" id="headingTwo">
+									<h2 class="mb-0">
+										<div class="coll-text insertkind">
+											<i class="icon">
+												<i class="one"></i>
+												<i class="two"></i>
+											</i>添加商品类型
+										</div>
+									</h2>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-10 offset-lg-2 col-12 rightbody" data-type=''>
+						<div class="">
+							<h2 class="my-4 p-t">精选</h2>
+							<table class="table table-hover table-striped table-bordered">
+								<thead class="thead-dark">
+									<tr>
+										<th>序号</th>
+										<th>商品图片</th>
+										<th>商品名称</th>
+										<th>商品价格</th>
+										<th>操作</th>
+									</tr>
+								</thead>
+								<tbody>
+									<!-- js添加 -->
+								</tbody>
+							</table>
+						</div>
+						<nav>
+							<ul class="pagination justify-content-center">
+								<li class="page-item"><a class="page-link" href="#">上一页</a></li>
+								<li class="page-item active"><a class="page-link" href="#">1</a></li>
+								<li class="page-item"><a class="page-link" href="#">2</a></li>
+								<li class="page-item"><a class="page-link" href="#">3</a></li>
+								<li class="page-item"><a class="page-link" href="#">下一页</a></li>
+							</ul>
+						</nav>
+					</div>
+				
+					<!-- 添加商品类型 -->
+					<div class="col-lg-10 offset-lg-2 col-12 insert-box">
+						<h2 class="py-3"><i class="icon">
+								<i class="icon1"></i>
+								<i class="icon2"></i>
+						</i>添加商品类型</h2>
+						<div class="btn btn-success" id="addinput">添加新的输入框</div>
+						<div class="input-box mt-4">
+							<p>添加第1个商品类型</p>
+							<div class="input-group mb-3 col-8 px-0">
+								<div class="input-group-prepend">
+									<span class="input-group-text" id="basic-addon3">商品类型</span>
+								</div>
+								<input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+							</div>
+						</div>
+						<button class="btn btn-info" id="savekinds">保存商品类型</button>
+						<button class="btn btn-danger clearinputs">清空输入框</button>
+					</div>
+					
+					<!-- 添加商品 -->
+					<div class="col-lg-10 offset-lg-2 col-12 add-box"  data-type=''>
+						<h2 class="py-3"><i class="icon">
+								<i class="icon1"></i>
+								<i class="icon2"></i>
+						</i>添加商品</h2>
+						<div class="input-box mt-4">
+							<div class="input-group mb-3 col-8 px-0">
+								<div class="input-group-prepend">
+									<span class="input-group-text" id="basic-addon3">商品类型</span>
+								</div>
+								<input type="text" class="form-control inputkind" id="basic-url" aria-describedby="basic-addon3" disabled >
+							</div>
+						</div>
+						<div class="input-box mt-4">
+							<div class="input-group mb-3 col-8 px-0">
+								<div class="input-group-prepend">
+									<span class="input-group-text" id="basic-addon3">商品名字</span>
+								</div>
+								<input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+							</div>
+						</div>
+						<div class="input-box mt-4">
+							<div class="input-group mb-3 col-8 px-0">
+								<div class="input-group-prepend">
+									<span class="input-group-text" id="basic-addon3">商品价格</span>
+								</div>
+								<input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+							</div>
+						</div>
+						<div class="input-box mt-4">
+							<div class="input-group mb-3 col-8 px-0">
+								<div class="input-group-prepend">
+									<span class="input-group-text" id="basic-addon3">商品图片路径</span>
+								</div>
+								<input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+							</div>
+						</div>
+						<button class="btn btn-info" id="save">保存商品</button>
+						<button class="btn btn-danger clearinputs">清空输入框</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 模态框 编辑商品 -->
+		<div class="modal fade" id="editm1">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 id="mtitle" class="modal-title">编辑商品</h5>
+					<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					
+					<form>
+						<div class="form-group mb-3">
+							<label for="">商品类型</label>
+							<input type="text" class="form-control" data-type='' id="edit-pro-type" disabled>
+						</div>
+						<div class="form-group mb-3">
+							<label for="">商品名称</label>
+							<input type="text" data-title="title" class="form-control edit-pro"  placeholder="商品名称">
+						</div>
+						<div class="form-group mb-3">
+							<label for="">商品价格</label>
+							<input type="text" data-title="price" class="form-control edit-pro"  placeholder="商品价格">
+						</div>
+						<div class="form-group mb-3">
+							<label for="">商品图片链接</label>
+							<input type="text" data-title="img" class="form-control edit-pro"  placeholder="商品图片链接">
+						</div>
+					</form>
+					
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+					<button id="saveedit" type="button" class="btn btn-primary">保存</button>
+				</div>
+			</div>
+		</div>
+		</div>
+
+
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/index.js"></script>
+		<script src="js/userindex.js"></script>
+	</body>
+</html>
